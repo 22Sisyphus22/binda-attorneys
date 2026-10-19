@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binda Attorneys | Law Firm in Newcastle, KwaZulu-Natal</title>
+<meta name="description" content="Binda Attorneys is a client-focused, 100% black-owned law firm in Newcastle, KZN. Contracts, company law, wills and estates, family law, criminal law, eviction, pension fund law and litigation.">
+<link rel="preload" as="image" href="images/hero-building.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15212E;
+  --ink-deep:#0E1823;
+  --brass:#B8893F;
+  --brass-light:#D9B26F;
+  --paper:#F2F3F1;
+  --white:#FFFFFF;
+  --stone:#5E6873;
+  --line:#D5D8D6;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --wrap:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--sans);font-size:1rem;line-height:1.65;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;letter-spacing:-.005em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:600 .95rem/1 var(--sans);padding:15px 26px;border-radius:2px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-brass{background:var(--brass);color:var(--ink-deep)}
+.btn-brass:hover{background:var(--brass-light)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--ink-deep)}
+
+/* Top bar */
+.topbar{background:var(--ink-deep);color:#C7CDD3;font-size:.82rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.topbar a{text-decoration:none}
+.topbar a:hover{color:#fff}
+.topbar .info{display:flex;gap:24px;flex-wrap:wrap}
+.social{display:flex;gap:14px;align-items:center}
+.social svg{width:16px;height:16px;fill:currentColor}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:40px;height:40px;border:1px solid var(--brass);display:grid;place-items:center;font:700 1.45rem/1 var(--serif);color:var(--brass-light)}
+.brand-name{font:600 1.5rem/1 var(--serif);letter-spacing:.01em}
+.brand-name small{display:block;font:500 .7rem/1.4 var(--sans);color:#9AA4AE;letter-spacing:.04em;margin-top:3px}
+nav.main ul{list-style:none;display:flex;gap:34px;margin:0;padding:0;align-items:center}
+nav.main a{text-decoration:none;font-size:.93rem;color:#D8DDE2}
+nav.main a:hover{color:#fff}
+nav.main .btn{color:var(--ink-deep);padding:12px 20px}
+.menu-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:9px 12px;border-radius:2px;font:500 .9rem var(--sans);cursor:pointer}
+
+/* Hero */
+.hero{position:relative;color:#fff;background:var(--ink-deep);min-height:min(88vh,780px);display:flex;align-items:flex-end;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,24,35,.94) 0%,rgba(14,24,35,.78) 42%,rgba(14,24,35,.25) 100%),linear-gradient(0deg,rgba(14,24,35,.9) 0%,rgba(14,24,35,0) 45%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:110px;padding-bottom:56px}
+.hero h1{font-size:clamp(2.9rem,7vw,5.6rem);max-width:12ch;font-weight:600}
+.hero .lede{font-size:1.15rem;color:#D3D9DF;max-width:46ch;margin:26px 0 34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:72px;border-top:1px solid rgba(217,178,111,.45)}
+.hero-facts div{padding:20px 24px 0 0}
+.hero-facts strong{display:block;font:600 1.6rem/1.1 var(--serif);color:var(--brass-light)}
+.hero-facts span{font-size:.88rem;color:#B9C2CA}
+.hero h1,.hero .lede,.hero-actions,.hero-facts{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .lede{animation-delay:.12s}.hero-actions{animation-delay:.22s}.hero-facts{animation-delay:.34s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* Sections */
+section{padding:110px 0}
+.section-head{max-width:640px;margin-bottom:56px}
+.section-head h2{font-size:clamp(2.2rem,4.5vw,3.4rem)}
+.section-head p{color:var(--stone);font-size:1.08rem;margin-top:18px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 75%}
+.about-img::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--brass);z-index:-1}
+.about-copy h2{font-size:clamp(2.2rem,4.5vw,3.4rem);margin-bottom:26px}
+.about-copy p{font-size:1.08rem;color:#3B4651;max-width:58ch}
+.values{display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px;border-top:1px solid var(--line)}
+.values div{padding-top:18px;font:600 1.3rem/1.2 var(--serif)}
+
+/* Practice areas */
+.practice{background:var(--white)}
+.areas{border-top:1px solid var(--line)}
+.areas details{border-bottom:1px solid var(--line)}
+.areas summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:28px 0}
+.areas summary::-webkit-details-marker{display:none}
+.areas summary h3{font-size:clamp(1.6rem,3vw,2.3rem);transition:color .2s}
+.areas summary:hover h3{color:var(--brass)}
+.areas .sum-note{display:block;font:400 .95rem/1.5 var(--sans);color:var(--stone);margin-top:6px}
+.plus{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;position:relative;flex:none;transition:transform .3s,border-color .2s,background .2s}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+details[open] .plus{background:var(--ink);border-color:var(--ink)}
+details[open] .plus::before,details[open] .plus::after{background:#fff}
+details[open] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.area-body{padding:0 0 32px;max-width:72ch;color:#3B4651;font-size:1.04rem}
+.area-body ul{margin:.4em 0 0;padding-left:1.1em}
+.area-body li{margin-bottom:.3em}
+details[open] .area-body{animation:open .35s ease both}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* Founder */
+.founder{background:var(--ink);color:#fff;overflow:hidden;padding-bottom:0}
+.founder-grid{display:grid;grid-template-columns:6fr 5fr;gap:60px;align-items:end}
+.founder-copy{padding-bottom:110px}
+.founder-copy .role{color:var(--brass-light);font-weight:500;margin-bottom:14px;font-size:.98rem}
+.founder-copy h2{font-size:clamp(2.6rem,5vw,4rem);margin-bottom:28px}
+.founder-copy p{color:#C9D0D7;font-size:1.08rem;max-width:56ch}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
+.creds strong{display:block;font:600 1.9rem/1 var(--serif);color:#fff}
+.creds span{display:block;font-size:.86rem;color:#9FAAB4;margin-top:8px}
+.founder-photo{position:relative;justify-self:center;width:100%;max-width:420px}
+.founder-photo::before{content:"";position:absolute;left:8%;right:8%;bottom:0;top:12%;background:linear-gradient(180deg,var(--brass) 0%,#8E6A2F 100%);border-radius:220px 220px 0 0}
+.founder-photo img{position:relative;width:100%;height:auto}
+
+/* Mission */
+.mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
+.mvv article{padding:34px 36px 0 0}
+.mvv article + article{padding-left:36px;border-left:1px solid var(--line)}
+.mvv h3{font-size:2rem;margin-bottom:16px}
+.mvv p{color:#3B4651}
+.mvv ul{list-style:none;margin:0;padding:0}
+.mvv li{font:600 1.45rem/1.6 var(--serif)}
+
+/* Why */
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:center}
+.why-list{margin-top:10px}
+.why-item{padding:26px 0;border-bottom:1px solid var(--line)}
+.why-item:first-child{border-top:1px solid var(--line)}
+.why-item h3{font-size:1.6rem;margin-bottom:8px}
+.why-item p{color:#3B4651;margin:0}
+.why-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:30% center}
+
+/* Partner band */
+.band{background:var(--brass);color:var(--ink-deep);padding:80px 0}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.band h2{font-size:clamp(2rem,4vw,3.1rem);max-width:20ch}
+.band p{margin:12px 0 0;max-width:52ch;font-size:1.05rem}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:80px}
+.contact-info h2{font-size:clamp(2.2rem,4.5vw,3.4rem);margin-bottom:22px}
+.contact-info > p{color:var(--stone);font-size:1.06rem}
+.contact-list{margin:34px 0;display:grid;gap:20px}
+.contact-list div{display:grid;grid-template-columns:90px 1fr;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.contact-list dt{color:var(--stone);font-size:.9rem}
+.contact-list dd{margin:0;font-weight:500}
+.contact-list a{text-decoration:none}
+.contact-list a:hover{color:var(--brass)}
+.hours{font-size:.95rem;color:#3B4651}
+.hours strong{display:block;font:600 1.3rem var(--serif);color:var(--ink);margin-bottom:6px}
+form.consult{background:var(--white);padding:46px;border-top:3px solid var(--brass)}
+form.consult h3{font-size:2rem;margin-bottom:6px}
+form.consult .note{color:var(--stone);font-size:.95rem;margin-bottom:28px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.86rem;font-weight:600;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;font:400 1rem var(--sans);color:var(--ink);padding:13px 14px;border:1px solid #C3C8CC;border-radius:2px;background:#FBFBFA}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(184,137,63,.18)}
+.form-msg{margin-top:14px;font-size:.92rem;color:var(--stone)}
+form.consult .btn{width:100%}
+
+/* Footer */
+footer{background:var(--ink-deep);color:#AEB7C0;padding:70px 0 28px;font-size:.93rem}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+footer h4{font:600 1.25rem var(--serif);color:#fff;margin:0 0 16px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.foot-brand p{max-width:34ch;margin-top:18px}
+.foot-bottom{margin-top:56px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem}
+
+/* WhatsApp */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+/* Responsive */
+@media (max-width:980px){
+  nav.main{position:absolute;top:76px;left:0;right:0;background:var(--ink);border-top:1px solid rgba(255,255,255,.08);display:none}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 24px}
+  nav.main li a{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  nav.main li:last-child a{margin-top:16px;border:0;padding:14px 20px}
+  .menu-toggle{display:block}
+  .about-grid,.why-grid,.contact-grid,.founder-grid{grid-template-columns:1fr;gap:56px}
+  .about-img{max-width:480px}
+  .why-img{order:-1;max-width:480px}
+  .founder-copy{padding-bottom:0}
+  .founder-photo{max-width:340px}
+  .mvv{grid-template-columns:1fr}
+  .mvv article,.mvv article + article{padding:30px 0;border-left:0;border-bottom:1px solid var(--line)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  section{padding:76px 0}
+  .topbar .info span.addr,.topbar .social{display:none}
+  .about-img::before{inset:-12px 12px 12px -12px}
+  .about-img{margin-left:12px}
+  .hero .wrap{padding-top:80px}
+  .hero-facts{grid-template-columns:1fr;margin-top:48px}
+  .hero-facts div{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .values{grid-template-columns:1fr 1fr}
+  .creds{grid-template-columns:1fr 1fr}
+  .field-row{grid-template-columns:1fr;gap:0}
+  form.consult{padding:30px 22px}
+  .foot-grid{grid-template-columns:1fr}
+  .brand-name small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="info">
+      <a href="mailto:info@bindaattorneys.co.za">info@bindaattorneys.co.za</a>
+      <a href="tel:+27343121440">034 312 1440</a>
+      <span class="addr">75 Allen Street, Newcastle, 2940</span>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/share/qdbdYAJSLos7bya2/?mibextid=qi2Omg" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.6c0-.8.5-1 .9-1h2.4V2h-3.3C10.4 2 9.7 4.6 9.7 6.3v2.2H7.5V12h2.2v10H14V12h3l.4-3.5H14z"/></svg></a>
+      <a href="https://www.linkedin.com/company/binda-attorneys/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg></a>
+      <a href="https://www.instagram.com/binda_attorneys?igsh=MWNteTNmM2kzZXB5cA==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM21.9 7.9c-.1-1.6-.4-3-1.6-4.2S17.7 2.2 16.1 2.1C14.4 2 9.6 2 7.9 2.1 6.3 2.2 4.9 2.5 3.7 3.7S2.2 6.3 2.1 7.9C2 9.6 2 14.4 2.1 16.1c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.5.1 8.2 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.7.1-6.5 0-8.2zm-2.1 10.1a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.4.4-5.9.4s-4.6.1-5.9-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.4-.4-5.9s-.1-4.6.4-5.9a3.3 3.3 0 0 1 1.9-1.9c1.3-.5 4.4-.4 5.9-.4s4.6-.1 5.9.4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.4.4 5.9s.1 4.6-.4 5.9z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Binda Attorneys home">
+      <span class="brand-mark">B</span>
+      <span class="brand-name">Binda Attorneys<small>Newcastle, KwaZulu-Natal</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="main" id="nav">
+      <ul>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#practice">Practice areas</a></li>
+        <li><a href="#founder">Our director</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn btn-brass">Book a consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" style="padding:0">
+  <img class="bg" src="images/hero-building.webp" alt="Office tower lit at night" width="1125" height="750" fetchpriority="high">
+  <div class="wrap">
+    <h1>Not only your lawyers. Your long-term partners.</h1>
+    <p class="lede">Binda Attorneys is a client-focused law firm in Newcastle, giving individuals and businesses clear advice and committed representation across eight areas of law.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-brass">Book a consultation</a>
+      <a href="tel:+27343121440" class="btn btn-ghost">Call 034 312 1440</a>
+    </div>
+    <div class="hero-facts">
+      <div><strong>100%</strong><span>Black-owned law firm</span></div>
+      <div><strong>Level 1</strong><span>B-BBEE contributor</span></div>
+      <div><strong>Since 2023</strong><span>Serving Newcastle and beyond</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-img">
+      <img src="images/scales.webp" alt="Brass scales of justice on an attorney's desk" width="900" height="1350" loading="lazy">
+    </div>
+    <div class="about-copy">
+      <h2>A dynamic practice built around the client.</h2>
+      <p>Binda Attorneys is committed to delivering exceptional legal services with integrity and care. We take the time to understand your situation, explain your options in plain language, and act decisively to protect your rights and interests.</p>
+      <p>From drafting a contract to defending you in court, you deal directly with an attorney who knows your matter and keeps you informed at every step.</p>
+    </div>
+  </div>
+</section>
+
+<section id="practice" class="practice">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Our practice areas</h2>
+      <p>Select an area to see how we can help.</p>
+    </div>
+    <div class="areas">
+      <details open>
+        <summary><div><h3>Contracts</h3><span class="sum-note">Drafting, review, negotiation and enforcement</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>We draft, review and negotiate contracts that protect your interests and leave no room for doubt. When an agreement is breached, we move quickly on enforcement and dispute resolution. We also prepare tailored contracts for businesses across a range of industries.</p>
+        </div>
+      </details>
+      <details>
+        <summary><div><h3>Company law</h3><span class="sum-note">Formation, governance, acquisitions and disputes</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>We guide businesses through formation, corporate governance, acquisitions, shareholder disputes and dissolution, so your company operates within the law, your personal assets stay protected and you can focus on growth.</p>
+        </div>
+      </details>
+      <details>
+        <summary><div><h3>Wills and deceased estates</h3><span class="sum-note">Wills, trusts and estate administration</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>We draft wills, establish trusts and administer deceased estates with meticulous attention to detail. Working closely with you, we build a plan that protects your assets, provides for your loved ones and ensures your wishes are carried out exactly.</p>
+        </div>
+      </details>
+      <details>
+        <summary><div><h3>Family law</h3><span class="sum-note">Divorce, custody, maintenance and adoption</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>Family matters are personal and often emotionally charged. We handle divorce proceedings, child custody arrangements, spousal maintenance and adoption with the sensitivity they demand, guiding you through difficult times with compassion and clarity.</p>
+        </div>
+      </details>
+      <details>
+        <summary><div><h3>Criminal law</h3><span class="sum-note">Defence from first consultation to appeal</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>We defend individuals facing charges ranging from minor offences to serious crimes. Our services cover:</p>
+          <ul>
+            <li>Pre-trial consultations and bail applications</li>
+            <li>Courtroom advocacy</li>
+            <li>Plea negotiations</li>
+            <li>Appeals</li>
+          </ul>
+          <p>We understand what is at stake and work to build a robust defence that protects your rights and secures a fair trial.</p>
+        </div>
+      </details>
+      <details>
+        <summary><div><h3>Eviction law</h3><span class="sum-note">For landlords and tenants</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>We represent both landlords and tenants through the eviction process, from drafting and enforcing notices to handling disputes and ensuring every legal requirement is met. Whether you need to lawfully regain possession of your property or defend against an unjust eviction, we provide strategic counsel and steady representation.</p>
+        </div>
+      </details>
+      <details>
+        <summary><div><h3>Pension fund law</h3><span class="sum-note">Claims, complaints and benefit disputes</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>We assist members and beneficiaries with pension and provident fund matters, including withheld or delayed benefits, death benefit distributions and complaints against funds, so you receive what you are entitled to.</p>
+        </div>
+      </details>
+      <details>
+        <summary><div><h3>Litigation and dispute resolution</h3><span class="sum-note">Civil disputes, in and out of court</span></div><span class="plus" aria-hidden="true"></span></summary>
+        <div class="area-body">
+          <p>When disputes arise, you need a skilled attorney in your corner. We handle a wide range of civil litigation, from contract disputes to personal injury claims, and pursue settlement where it serves you best, working tirelessly for the strongest possible outcome.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="founder" class="founder">
+  <div class="wrap founder-grid">
+    <div class="founder-copy">
+      <p class="role">Founder and Director</p>
+      <h2>Andile Vilakazi</h2>
+      <p>Andile founded Binda Attorneys in 2023, establishing the firm's main offices in Newcastle. He was admitted as an attorney in 2021 after completing his LLB at the University of Pretoria.</p>
+      <p>His experience spans contract law, litigation, company law, family law, wills and estates, land reform, eviction, criminal law and pension funds, giving clients one trusted adviser across the matters that shape their lives and businesses.</p>
+      <div class="creds">
+        <div><strong>LLB</strong><span>University of Pretoria</span></div>
+        <div><strong>2021</strong><span>Admitted as an attorney</span></div>
+        <div><strong>2023</strong><span>Founded Binda Attorneys</span></div>
+      </div>
+    </div>
+    <div class="founder-photo">
+      <img src="images/andile-vilakazi.webp" alt="Andile Vilakazi, founder and director of Binda Attorneys" width="407" height="613" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="mission">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>You are our priority</h2>
+    </div>
+    <div class="mvv">
+      <article>
+        <h3>Mission</h3>
+        <p>To provide exceptional legal services with integrity, professionalism and a commitment to the best possible outcome. We deliver personalised legal solutions that protect your rights, advance your interests and navigate the complexities of the law with expertise and care.</p>
+      </article>
+      <article>
+        <h3>Vision</h3>
+        <p>To be esteemed as a premier provider of specialised legal services, distinguished by excellence, ethical integrity and a client-centred approach, empowering every client with sophisticated and effective legal solutions.</p>
+      </article>
+      <article>
+        <h3>Values</h3>
+        <ul><li>Honesty</li><li>Reliability</li><li>Transparency</li><li>Integrity</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="section-head" style="margin-bottom:36px">
+        <h2>Why clients choose us</h2>
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <h3>Black-owned, Level 1 B-BBEE</h3>
+          <p>We are a 100% black-owned law firm rated Level 1 for Black Economic Empowerment, a strong partner for businesses with transformation goals.</p>
+        </div>
+        <div class="why-item">
+          <h3>A proven record</h3>
+          <p>Outstanding credentials, an unblemished track record and a long list of clients willing to vouch for our work.</p>
+        </div>
+        <div class="why-item">
+          <h3>Excellence in every detail</h3>
+          <p>The same high standard applies from legal strategy to the way we communicate with you: prompt, clear and honest.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why-img">
+      <img src="images/office.webp" alt="Attorney at his desk beside a Lady Justice statue" width="953" height="1200" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div>
+      <h2>Join the clients who found peace of mind with us.</h2>
+      <p>Tell us about your matter and we will come back to you to arrange a consultation.</p>
+    </div>
+    <a href="#contact" class="btn btn-ink">Book a consultation</a>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <h2>Visit or contact our head office</h2>
+      <p>Call, email or send us a message on WhatsApp. For a consultation, complete the form and we will get back to you soon.</p>
+      <dl class="contact-list">
+        <div><dt>Address</dt><dd>75 Allen Street, Newcastle, 2940</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+27343121440">034 312 1440</a></dd></div>
+        <div><dt>Cell</dt><dd><a href="tel:+27738675933">073 867 5933</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:info@bindaattorneys.co.za">info@bindaattorneys.co.za</a></dd></div>
+      </dl>
+      <div class="hours">
+        <strong>Office hours</strong>
+        Monday to Friday, 08:00 to 16:00<br>
+        Closed on weekends and public holidays
+      </div>
+    </div>
+
+    <form class="consult" id="consultForm" novalidate>
+      <h3>Request a consultation</h3>
+      <p class="note">All information you share is treated as confidential.</p>
+      <div class="field-row">
+        <div class="field"><label for="fname">First name</label><input id="fname" name="fname" autocomplete="given-name" required></div>
+        <div class="field"><label for="lname">Last name</label><input id="lname" name="lname" autocomplete="family-name" required></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field">
+        <label for="area">Area of law</label>
+        <select id="area" name="area">
+          <option>Not sure yet</option>
+          <option>Contracts</option>
+          <option>Company law</option>
+          <option>Wills and deceased estates</option>
+          <option>Family law</option>
+          <option>Criminal law</option>
+          <option>Eviction law</option>
+          <option>Pension fund law</option>
+          <option>Litigation and dispute resolution</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Briefly describe your matter</label><textarea id="message" name="message" required></textarea></div>
+      <button type="submit" class="btn btn-brass">Send consultation request</button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="brand-mark">B</span><span class="brand-name" style="color:#fff">Binda Attorneys</span></a>
+        <p>A client-focused law firm in Newcastle, KwaZulu-Natal. Not only your lawyers, but your long-term partners.</p>
+      </div>
+      <div>
+        <h4>Practice areas</h4>
+        <ul>
+          <li><a href="#practice">Contracts</a></li>
+          <li><a href="#practice">Company law</a></li>
+          <li><a href="#practice">Wills and estates</a></li>
+          <li><a href="#practice">Family law</a></li>
+          <li><a href="#practice">Criminal law</a></li>
+          <li><a href="#practice">Eviction law</a></li>
+          <li><a href="#practice">Pension fund law</a></li>
+          <li><a href="#practice">Litigation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>75 Allen Street, Newcastle, 2940</li>
+          <li><a href="tel:+27343121440">034 312 1440</a></li>
+          <li><a href="tel:+27738675933">073 867 5933</a></li>
+          <li><a href="mailto:info@bindaattorneys.co.za">info@bindaattorneys.co.za</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon to Fri: 08:00 to 16:00</li>
+          <li>Saturday: Closed</li>
+          <li>Sunday: Closed</li>
+          <li>Public holidays: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="yr">2026</span> Binda Attorneys. All rights reserved.</span>
+      <span>Website by <a href="https://atlastech.co.za" target="_blank" rel="noopener">Atlas Tech</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/27738675933?text=Hello%20Binda%20Attorneys%2C%20I%20would%20like%20to%20enquire%20about%20a%20consultation." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('nav');
+toggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+  toggle.textContent = open ? 'Close' : 'Menu';
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.textContent = 'Menu';
+}));
+
+// Consultation form: opens the visitor's email app with the request pre-filled.
+// Swap for a form service (e.g. Formspree, Web3Forms) for submissions without an email client.
+document.getElementById('consultForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target, msg = document.getElementById('formMsg');
+  const v = id => f.querySelector('#' + id).value.trim();
+  if (!v('fname') || !v('lname') || !v('email') || !v('message')) {
+    msg.textContent = 'Please fill in your name, email and a short description of your matter.';
+    return;
+  }
+  if (!/^\S+@\S+\.\S+$/.test(v('email'))) {
+    msg.textContent = 'Enter a valid email address, for example name@example.com.';
+    return;
+  }
+  const subject = `Consultation request: ${v('area')}`;
+  const body = `Name: ${v('fname')} ${v('lname')}\nEmail: ${v('email')}\nPhone: ${v('phone') || 'Not provided'}\nArea of law: ${v('area')}\n\n${v('message')}`;
+  window.location.href = `mailto:info@bindaattorneys.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  msg.textContent = 'Your email app has opened with your request. Press send to submit it.';
+});
+</script>
+</body>
+</html>
